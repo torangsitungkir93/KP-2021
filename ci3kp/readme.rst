@@ -1,4 +1,12 @@
 ###################
+Apa itu ci3kp
+###################
+
+ci3kp adalah pelatihan awal untuk mendapatkan sertifikasi web.Tujuannya adalah untuk
+digunakan pada pengajuan kp nanti.Pada repo ini belajar mengenai penggunaan framework codeigniter3.
+
+
+###################
 What is CodeIgniter
 ###################
 
