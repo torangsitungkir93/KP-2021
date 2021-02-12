@@ -1,7 +1,8 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 d-flex justify-content-between ">
             <h1>Artikel</h1>
+            <a href="<?= base_url(); ?>post/tambah" class="btn btn-primary align-self-center">Tambah Post</a>
         </div>
     </div>
     <?= $this->pagination->create_links(); ?>
@@ -14,7 +15,10 @@
                 <?= $post['isi']; ?>
             </p>
             <a role="button" href="<?= base_url(); ?>posts/artikel <?= $post['judul'] ?>" class="btn btn-primary">Lihat
-                &raquo;</a>
+                &raquo;
+            </a>
+            <a role="button" href="<?= base_url(); ?>post/update/<?= $post['id_post']; ?>"
+                class="btn btn-success">Update</a>
             <hr>
         </div>
         <?php endforeach; ?>

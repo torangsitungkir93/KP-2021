@@ -78,4 +78,20 @@ class Post extends CI_Controller
         $this->Post_model->tambahPost();
         echo "Sukses Menambahkan";
     }
+
+    public function update($id)
+    {
+        $data['judul'] = "Update POST";
+        $data['post']  = $this->Post_model->getPostsById($id);
+
+        $this->load->view("templates/header", $data);
+        $this->load->view("posts/update", $data);
+        $this->load->view("templates/footer");
+    }
+
+    public function prosesUpdate($id)
+    {
+        $this->Post_model->updatePost($id);
+        redirect(base_url() . "post");
+    }
 }

@@ -37,4 +37,25 @@ class Post_model extends CI_Model
         return $this->db->like('judul', $keyword)->from('posts')
             ->count_all_results();
     }
+
+    public function getPostsById($id)
+    {
+        return $this->db
+            ->select("id_post,judul,isi ")
+            ->where('id_post', $id)
+            ->get('posts')
+            ->result_array();
+    }
+
+    public function updatePost($id)
+    {
+        $data = array(
+            'judul' => $this->input->post('judul'),
+            'isi' => $this->input->post('isi')
+        );
+
+        $this->db
+            ->where('id_post', $id)
+            ->update('posts', $data);
+    }
 }
