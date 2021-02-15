@@ -58,4 +58,11 @@ class Post_model extends CI_Model
             ->where('id_post', $id)
             ->update('posts', $data);
     }
+
+    public function hapusPost($id)
+    {
+        $this->db
+            ->where('id_post', $id)
+            ->delete('posts');
+    }
 }

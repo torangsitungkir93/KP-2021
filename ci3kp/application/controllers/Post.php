@@ -94,4 +94,10 @@ class Post extends CI_Controller
         $this->Post_model->updatePost($id);
         redirect(base_url() . "post");
     }
+
+    public function hapus($id)
+    {
+        $this->Post_model->hapusPost($id);
+        redirect(base_url() . "post");
+    }
 }

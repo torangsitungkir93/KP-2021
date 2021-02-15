@@ -19,6 +19,8 @@
             </a>
             <a role="button" href="<?= base_url(); ?>post/update/<?= $post['id_post']; ?>"
                 class="btn btn-success">Update</a>
+            <a href="<?= base_url() ?>post/hapus/<?= $post['id_post'] ?>" class="btn btn-danger"
+                onclick="return confirm ('Yakin ingin menghapus post ini?')">Hapus</a>
             <hr>
         </div>
         <?php endforeach; ?>
