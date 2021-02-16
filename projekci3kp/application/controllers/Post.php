@@ -68,6 +68,15 @@ class Post extends CI_Controller
         $this->load->view('templates/footer');
     }
 
+    public function lihat()
+    {
+        $data['judul'] = "Lihat POST";
+
+        $this->load->view("templates/header", $data);
+        $this->load->view("posts/lihat", $data);
+        $this->load->view("templates/footer");
+    }
+
     public function tambah()
     {
         if (logged_in()) {
