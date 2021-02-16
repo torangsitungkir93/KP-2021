@@ -12,6 +12,9 @@ class Post extends CI_Controller
 
     public function index()
     {
+        if ($this->session->userdata('keyword') == false) {
+            $this->session->set_userdata('keyword', '');
+        }
         $data['judul'] = "Halaman Post";
         $config['base_url'] = base_url('post/index');
 
@@ -67,10 +70,26 @@ class Post extends CI_Controller
 
     public function tambah()
     {
-        $data['judul'] = "Tambah POST";
-        $this->load->view("templates/header", $data);
-        $this->load->view("posts/tambah");
-        $this->load->view("templates/footer");
+        if (logged_in()) {
+            $data['judul'] = 'Tambah Post';
+
+            $this->form_validation->set_rules('judul', 'Judul Post', 'required');
+            $this->form_validation->set_rules('isi', 'Isi Post', 'required');
+
+            if ($this->form_validation->run() == FALSE) {
+                $this->load->view('templates/header', $data);
+                $this->load->view('posts/tambah');
+                $this->load->view('templates/footer');
+            } else {
+                $this->Post_model->tambahPost();
+                $this->session->set_flashdata('notif', 'ditambahkan');
+                $this->session->set_flashdata('alert', 'success');
+                $this->session->set_flashdata('tipe', 'berhasil');
+                redirect(base_url('post'));
+            }
+        } else {
+            redirect('auth');
+        }
     }
 
     public function prosesTambah()
