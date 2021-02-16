@@ -1,45 +1,122 @@
-<main class="bg-light vh-100">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card mt-5">
-                    <div class="card-body">
-                        <form action="" method="POST">
-                            <h1>Form Register</h1>
-                            <div class="form-group">
-                                <label for="name">Nama Lengkap</label>
-                                <input type="text" name="name" class="form-control" id="name"
-                                    value="<?= set_value('name'); ?>">
-                                <?= form_error('name', '<small class="pl-3 text-danger">', '</small>'); ?>
-                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email address</label>
-                                <input type="email" name="email" class="form-control" id="email"
-                                    value="<?= set_value('email'); ?>">
-                                <?= form_error('email', '<small class="pl-3 text-danger">', '</small>'); ?>
+<!DOCTYPE html>
+<html lang="en">
 
-                                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                            </div>
-                            <div class="form-row mb-3">
-                                <div class="col">
-                                    <label for="password">Password</label>
-                                    <input type="password" name="password1" class="form-control" id="password">
-                                    <?= form_error('password1', '<small class="pl-3 text-danger">', '</small>'); ?>
-                                </div>
-                                <div class="col">
-                                    <label for="password">Konfirmasi Password</label>
-                                    <input type="password" name="password2" class="form-control" id="password">
-                                    <?= form_error('password2', '<small class="pl-3 text-danger">', '</small>'); ?>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Daftar</button>
-                        </form>
-                        <small>Sudah punya akun? <a href="<?= base_url('auth'); ?>"
-                                class="font-weight-bold">Masuk</a></small>
-                    </div>
+<head>
+    <title>Login </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="<?= base_url(); ?>assets/auth/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/auth/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css"
+        href="<?= base_url(); ?>assets/auth/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/auth/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css"
+        href="<?= base_url(); ?>assets/auth/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/auth/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/auth/css/util.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/auth/css/main.css">
+    <!--===============================================================================================-->
+</head>
+
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100">
+                <div class="login100-pic js-tilt" data-tilt>
+                    <img src="images/img-03.png" alt="IMG">
                 </div>
+
+                <form class="login100-form validate-form">
+                    <span class="login100-form-title">
+                        Member Registration
+                    </span>
+
+                    <div class="wrap-input100 validate-input">
+                        <input class="input100" type="text" name="name" placeholder="Nama">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="email" placeholder="Email">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-envelope" aria-hidden="false"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input" data-validate="Password is required">
+                        <input class="input100" type="password" name="repass" placeholder="Ulangi Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn">
+                            Registration
+                        </button>
+                    </div>
+
+                    <div class="text-center p-t-12">
+                        <span class="txt1">
+                            Forgot
+                        </span>
+                        <a class="txt2" href="#">
+                            Username / Password?
+                        </a>
+                    </div>
+
+                    <div class="text-center p-t-50">
+                        <a class="txt2" href="index.html">
+                            Login your Account
+                            <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</main>
+
+
+
+
+    <!--===============================================================================================-->
+    <script src="<?= base_url(); ?>assets/auth/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="<?= base_url(); ?>assets/auth/vendor/bootstrap/js/popper.js"></script>
+    <script src="<?= base_url(); ?>assets/auth/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="<?= base_url(); ?>assets/auth/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="<?= base_url(); ?>assets/auth/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+    $('.js-tilt').tilt({
+        scale: 1.1
+    })
+    </script>
+    <!--===============================================================================================-->
+    <script src="<?= base_url(); ?>assets/auth/js/main.js"></script>
+
+</body>
+
+</html>
