@@ -4,7 +4,7 @@
             <div class="card">
                 <h5 class="card-header">Update Post</h5>
                 <div class="card-body">
-                    <?php foreach ($post as $post) : ?>
+
                     <form action="<?= base_url(); ?>post/prosesUpdate/<?= $post['id_post']; ?>" method="POST">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Judul</label>
@@ -23,7 +23,6 @@
                         <button type="submit" class="btn btn-primary">Submit</button>
                         <a href="<?= base_url(); ?>" class="btn btn-seecondary"></a>
                     </form>
-                    <?php endforeach;  ?>
                 </div>
             </div>
         </div>

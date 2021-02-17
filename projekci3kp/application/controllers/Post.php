@@ -15,7 +15,7 @@ class Post extends CI_Controller
         if ($this->session->userdata('keyword') == false) {
             $this->session->set_userdata('keyword', '');
         }
-        $data['judul'] = "Halaman Post";
+        $data['title'] = "Halaman Post";
         $config['base_url'] = base_url('post/index');
 
         if (isset($_POST['submit'])) {
@@ -68,10 +68,10 @@ class Post extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function lihat()
+    public function lihat($id)
     {
-        $data['judul'] = "Lihat POST";
-
+        $data['title'] = "Lihat Post";
+        $data['post'] = $this->Post_model->getPostsById($id);
         $this->load->view("templates/header", $data);
         $this->load->view("posts/lihat", $data);
         $this->load->view("templates/footer");
@@ -80,23 +80,39 @@ class Post extends CI_Controller
     public function tambah()
     {
         if (logged_in()) {
-            $data['judul'] = 'Tambah Post';
+            $data['title'] = 'Tambah Post';
 
             $this->form_validation->set_rules('judul', 'Judul Post', 'required');
             $this->form_validation->set_rules('isi', 'Isi Post', 'required');
 
             if ($this->form_validation->run() == FALSE) {
-                $this->load->view('templates/header', $data);
-                $this->load->view('posts/tambah');
-                $this->load->view('templates/footer');
+                $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show"
+                role="alert">
+               <strong>Failed!</strong> Data gagal ditambahkan/Data tidak boleh kosong !
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>');
+                redirect(base_url('post'));
             } else {
                 $this->Post_model->tambahPost();
-                $this->session->set_flashdata('notif', 'ditambahkan');
-                $this->session->set_flashdata('alert', 'success');
-                $this->session->set_flashdata('tipe', 'berhasil');
+                $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show"
+                role="alert">
+               <strong>Success!</strong> Data sudah berhasil ditambahkan !
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>');
                 redirect(base_url('post'));
             }
         } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show"
+                role="alert">
+               <strong>Gagal!</strong> Data gagal ditambahkan,silahkan login terlebih dahulu !
+               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>');
             redirect('auth');
         }
     }
@@ -104,12 +120,11 @@ class Post extends CI_Controller
     public function prosesTambah()
     {
         $this->Post_model->tambahPost();
-        echo "Sukses Menambahkan";
     }
 
     public function update($id)
     {
-        $data['judul'] = "Update POST";
+        $data['title'] = "Update POST";
         $data['post']  = $this->Post_model->getPostsById($id);
 
         $this->load->view("templates/header", $data);
@@ -119,13 +134,47 @@ class Post extends CI_Controller
 
     public function prosesUpdate($id)
     {
-        $this->Post_model->updatePost($id);
+        if (logged_in()) {
+            $this->Post_model->updatePost($id);
+            $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show"
+             role="alert">
+            <strong>Selamat!</strong> Data post berhasil di Update!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show"
+            role="alert">
+           <strong>Gagal!</strong> Anda harus login terlebih dahulu untuk memakai fitur ini !
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>');
+        }
         redirect(base_url() . "post");
     }
 
     public function hapus($id)
     {
-        $this->Post_model->hapusPost($id);
+        if (logged_in()) {
+            $this->Post_model->hapusPost($id);
+            $this->session->set_flashdata('message', '<div class="alert alert-info alert-dismissible fade show"
+             role="alert">
+            <strong></strong> Data post yang anda pilih berhasil di hapus !
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show"
+            role="alert">
+           <strong>Gagal!</strong> Anda harus login terlebih dahulu untuk memakai fitur ini !
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>');
+        }
         redirect(base_url() . "post");
     }
 }

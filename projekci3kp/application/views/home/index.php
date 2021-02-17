@@ -5,26 +5,34 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
+        <?php
+        $link1 = base_url() . 'assets/img/poster1.jpg';
+        $link2 = base_url() . 'assets/img/poster2.jpg';
+        $link3 = base_url() . 'assets/img/poster3.jpg';
+
+        $carousel1 = base_url() . 'assets/img/carousel1.jpg';
+        $carousel2 = base_url() . 'assets/img/carousel2.png';
+        $carousel3 = base_url() . 'assets/img/carousel3.jpg';
+
+        $about = base_url() . 'assets/img/about.gif';
+        ?>
         <div class="carousel-inner" role="listbox">
             <!-- Slide One - Set the background image for this slide in the line below -->
-            <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+            <div class="carousel-item active" style="background-image: url('<?= $carousel1; ?>') ">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>First Slide</h3>
-                    <p>This is a description for the first slide.</p>
                 </div>
             </div>
             <!-- Slide Two - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+            <div class="carousel-item" style="background-image: url('<?= $carousel2; ?>')">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Second Slide</h3>
-                    <p>This is a description for the second slide.</p>
                 </div>
             </div>
             <!-- Slide Three - Set the background image for this slide in the line below -->
-            <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+            <div class="carousel-item" style="background-image: url('<?= $carousel3; ?>')">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Third Slide</h3>
-                    <p>This is a description for the third slide.</p>
                 </div>
             </div>
         </div>
@@ -47,20 +55,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <img class="img-fluid rounded mb-4" src="http://placehold.it/750x450" alt="">
+            <img class="img-fluid rounded mb-4" src="<?= $about; ?>" alt="">
         </div>
         <div class="col-lg-6">
-            <h2>About Modern Business</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil eum consectetur similique?
-                Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit voluptatem perferendis dicta
-                dolorem
-                non blanditiis ex fugiat.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni, aperiam vitae illum voluptatum
-                aut
-                sequi impedit non velit ab ea pariatur sint quidem corporis eveniet. Odit, temporibus reprehenderit
-                dolorum!
+            <h2 style="margin-left: 35px;"> Tentang MyBlog </h2>
+            <p style="margin-left: 35px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate nihil
+                eum consectetur similique? Consectetur, quod, incidunt, harum nisi dolores delectus reprehenderit
+                voluptatem perferendis dicta dolorem non blanditiis ex fugiat.</p>
+            <p style="margin-left: 35px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, magni,
+                aperiam vitae illum voluptatum aut sequi impedit non velit ab ea pariatur sint quidem corporis eveniet.
+                Odit, temporibus reprehenderit dolorum!
             </p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur, modi mollitia corporis ipsa
+            <p style="margin-left: 35px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, consequuntur,
+                modi mollitia corporis ips
                 voluptate corrupti eum ratione ex ea praesentium quibusdam? Aut, in eum facere corrupti necessitatibus
                 perspiciatis quis?</p>
         </div>
@@ -73,46 +80,46 @@
     <div class="row">
         <div class="col-lg-4 mb-4">
             <div class="card h-100 text-center">
-                <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+                <img class="card-img-top" src="<?= $link1; ?>" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Team Member</h4>
+                    <h4 class="card-title">Fortnite</h4>
                     <h6 class="card-subtitle mb-2 text-muted">Position</h6>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia
                         eum
                         ipsum fugiat odio officiis odit.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#">name@example.com</a>
+                    <a href="#">Fortnite@example.com</a>
                 </div>
             </div>
         </div>
         <div class="col-lg-4 mb-4">
             <div class="card h-100 text-center">
-                <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+                <img class="card-img-top" src="<?= $link2; ?>" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Team Member</h4>
+                    <h4 class="card-title">Among Us</h4>
                     <h6 class="card-subtitle mb-2 text-muted">Position</h6>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia
                         eum
                         ipsum fugiat odio officiis odit.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#">name@example.com</a>
+                    <a href="#">amongUs@example.com</a>
                 </div>
             </div>
         </div>
         <div class="col-lg-4 mb-4">
             <div class="card h-100 text-center">
-                <img class="card-img-top" src="http://placehold.it/750x450" alt="">
+                <img class="card-img-top" src="<?= $link3; ?>" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Team Member</h4>
+                    <h4 class="card-title">Valorant</h4>
                     <h6 class="card-subtitle mb-2 text-muted">Position</h6>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia
                         eum
                         ipsum fugiat odio officiis odit.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#">name@example.com</a>
+                    <a href="#">valorant@example.com</a>
                 </div>
             </div>
         </div>

@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title><?= $title; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -16,6 +16,9 @@
 
     <!-- Custom styles for this template -->
     <link href="<?= base_url(); ?>assets/css/modern-business.css" rel="stylesheet">
+    <link href="<?= base_url(); ?>assets/css/mycss.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+
     <link href="<?= base_url('assets/') ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet"
@@ -28,7 +31,8 @@
     <!-- Navigation -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="<?= base_url(); ?>home">My Blog</a>
+            <a class="navbar-brand" href="<?= base_url(); ?>home"> <img
+                    src="<?= base_url(); ?>assets/auth/images/icons/mylogo.png" width="30px" height="23px"> My Blog</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                 data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -43,7 +47,7 @@
                         <a class="nav-link" href="<?= base_url(); ?>post">Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
@@ -61,10 +65,11 @@
 
                 </ul>
                 <?php if (logged_in()) : ?>
-                <a class="btn btn-warning my-2 my-sm-0 mx-3" href="<?= base_url('auth/'); ?>logout "> <i
-                        class="fa fa-paper-plane" aria-hidden="true"></i> Logout</a>
+                <a class="btn btn-success my-2 my-sm-0 mx-3" href="<?= base_url('auth/'); ?>logout "> <i
+                        class="fa fa-paper-plane" aria-hidden="true"
+                        onclick="return confirm ('Yakin ingin menghapus post ini?')"></i> Logout</a>
                 <?php else : ?>
-                <a class="btn btn-success my-2 my-sm-0 mx-3" href="<?= base_url('auth'); ?>"><i
+                <a class="btn btn-warning my-2 my-sm-0 mx-3" href="<?= base_url('auth'); ?>"><i
                         class="fa fa-chevron-right" aria-hidden="true"></i> Login</a>
                 <?php endif; ?>
             </div>

@@ -21,7 +21,7 @@ class Post_model extends CI_Model
     public function getPosts($limit, $start, $keyword = null)
     {
         return $this->db
-            ->select("id_post,judul,SUBSTRING(isi,1,140) as isi ")
+            ->select("id_post,judul,SUBSTRING(isi,1,300) as isi ")
             ->like('judul', $keyword)
             ->order_by('id_post', 'asc')
             ->get('posts', $limit, $start)
@@ -42,10 +42,10 @@ class Post_model extends CI_Model
     public function getPostsById($id)
     {
         return $this->db
-            ->select("id_post,judul,isi ")
+            ->select("id_post,judul,isi")
             ->where('id_post', $id)
             ->get('posts')
-            ->result_array();
+            ->row_array();
     }
 
     public function updatePost($id)

@@ -1,13 +1,13 @@
 <div class="container">
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">Post Title
+    <h1 class="mt-4 mb-3"><?= $post['judul']; ?>
     </h1>
 
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
-            <a href="index.html">Home</a>
+            <a href="<?= base_url(); ?>post">Post</a>
         </li>
-        <li class="breadcrumb-item active">Blog Home 2</li>
+        <li class="breadcrumb-item active">Lihat Post</li>
     </ol>
 
     <div class="row">
@@ -16,30 +16,17 @@
         <div class="col-lg-8">
 
             <!-- Preview Image -->
-            <img class="img-fluid rounded" src="http://placehold.it/900x300" alt="">
+            <img class="img-fluid rounded" src="<?= base_url() ?>assets/img/poster1.jpg" alt="">
 
             <hr>
 
             <!-- Date/Time -->
-            <p>Posted on January 1, 2017 at 12:00 PM</p>
+            <p>Posted on Februay 17, 2021 at 19:45 PM</p>
 
             <hr>
 
             <!-- Post Content -->
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vero, obcaecati, aut,
-                error
-                quam sapiente nemo saepe quibusdam sit excepturi nam quia corporis eligendi eos magni recusandae laborum
-                minus inventore?</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur natus doloremque laborum quos iste
-                ipsum rerum obcaecati impedit odit illo dolorum ab tempora nihil dicta earum fugiat. Temporibus,
-                voluptatibus.</p>
-
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, doloribus, dolorem iusto blanditiis unde
-                eius
-                illum consequuntur neque dicta incidunt ullam ea hic porro optio ratione repellat perspiciatis. Enim,
-                iure!
-            </p>
+            <p class="" style="text-indent: 35px;"><?= $post['isi']; ?></p>
 
             <blockquote class="blockquote">
                 <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
@@ -61,7 +48,7 @@
 
             <!-- Comments Form -->
             <div class="card my-4">
-                <h5 class="card-header">Leave a Comment:</h5>
+                <h5 class="card-header">Tinggalkan Komentar </h5>
                 <div class="card-body">
                     <form>
                         <div class="form-group">
@@ -76,7 +63,7 @@
             <div class="media mb-4">
                 <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
                 <div class="media-body">
-                    <h5 class="mt-0">Commenter Name</h5>
+                    <h5 class="mt-0">Michael</h5>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
                     purus
                     odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
@@ -88,7 +75,7 @@
             <div class="media mb-4">
                 <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
                 <div class="media-body">
-                    <h5 class="mt-0">Commenter Name</h5>
+                    <h5 class="mt-0">Putri</h5>
                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras
                     purus
                     odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate
@@ -97,7 +84,7 @@
                     <div class="media mt-4">
                         <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
                         <div class="media-body">
-                            <h5 class="mt-0">Commenter Name</h5>
+                            <h5 class="mt-0">Super Admin</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
                             Cras
                             purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
@@ -109,7 +96,7 @@
                     <div class="media mt-4">
                         <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
                         <div class="media-body">
-                            <h5 class="mt-0">Commenter Name</h5>
+                            <h5 class="mt-0">Putri</h5>
                             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.
                             Cras
                             purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac
@@ -123,6 +110,7 @@
 
         </div>
 
+
         <!-- Sidebar Widgets Column -->
         <div class="col-md-4">
 
@@ -131,29 +119,42 @@
                 <h5 class="card-header">Categories</h5>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a href="#">Web Design</a>
+                                    <a href="#"><span class="badge badge-pill badge-info">Adventure</span></a>
                                 </li>
                                 <li>
-                                    <a href="#">HTML</a>
+                                    <a href="#"><span class="badge badge-pill badge-warning">Mistery</span></a>
                                 </li>
                                 <li>
-                                    <a href="#">Freebies</a>
+                                    <a href="#"><span class="badge badge-pill badge-primary">Horror</span></a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-4">
                             <ul class="list-unstyled mb-0">
                                 <li>
-                                    <a href="#">JavaScript</a>
+                                    <a href="#"><span class="badge badge-pill badge-danger">Survival</span></a>
                                 </li>
                                 <li>
-                                    <a href="#">CSS</a>
+                                    <a href="#"><span class="badge badge-pill badge-success">Arcade</span></a>
                                 </li>
                                 <li>
-                                    <a href="#">Tutorials</a>
+                                    <a href="#"><span class="badge badge-pill badge-dark">MMORPG</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4">
+                            <ul class="list-unstyled mb-0">
+                                <li>
+                                    <a href="#"><span class="badge badge-pill badge-danger">Action</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="badge badge-pill badge-secondary">Role-Playing</span></a>
+                                </li>
+                                <li>
+                                    <a href="#"><span class="badge badge-pill badge-primary">Simulation</span></a>
                                 </li>
                             </ul>
                         </div>
