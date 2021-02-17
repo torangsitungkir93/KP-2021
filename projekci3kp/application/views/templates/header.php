@@ -12,9 +12,14 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="<?= base_url(); ?>assets/auth/images/icons/mylogo.png" />
 
     <!-- Custom styles for this template -->
     <link href="<?= base_url(); ?>assets/css/modern-business.css" rel="stylesheet">
+    <link href="<?= base_url('assets/') ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 
 </head>
 
@@ -53,19 +58,15 @@
                             <a class="dropdown-item" href="portfolio-item.html">Single Portfolio Item</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            Blog
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-                            <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-                            <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-                            <a class="dropdown-item" href="blog-post.html">Blog Post</a>
-                        </div>
-                    </li>
+
                 </ul>
-                <a href="<?= base_url(); ?>auth" class="btn btn-warning">Login</a>
+                <?php if (logged_in()) : ?>
+                <a class="btn btn-warning my-2 my-sm-0 mx-3" href="<?= base_url('auth/'); ?>logout "> <i
+                        class="fa fa-paper-plane" aria-hidden="true"></i> Logout</a>
+                <?php else : ?>
+                <a class="btn btn-success my-2 my-sm-0 mx-3" href="<?= base_url('auth'); ?>"><i
+                        class="fa fa-chevron-right" aria-hidden="true"></i> Login</a>
+                <?php endif; ?>
             </div>
         </div>
     </nav>
