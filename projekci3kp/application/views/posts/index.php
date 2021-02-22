@@ -13,6 +13,8 @@
     <?= $this->pagination->create_links(); ?>
 
     <?= $this->session->flashdata('message'); ?>
+    <?= $this->session->unset_userdata('message') ?>
+
     <div class="row">
         <?php foreach ($posts as $post) : ?>
         <div class="col-lg-4 col-sm-6 portfolio-item">

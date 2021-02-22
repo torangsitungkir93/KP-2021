@@ -177,7 +177,7 @@ class Auth extends CI_Controller
                     $this->User_model->activate($email);
                     $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show"
                     role="alert">
-                   <strong></strong> ' . $email . ' Has been activated ! Please Login :)
+                   <strong> ' . $email . ' </strong>  Has been activated ! Please Login :)
                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                      <span aria-hidden="true">&times;</span>
                    </button>
@@ -220,7 +220,6 @@ class Auth extends CI_Controller
     public function logout()
     {
         $this->session->unset_userdata('email');
-
         $this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show"
         role="alert">
        <strong></strong> You Have Been Logout !

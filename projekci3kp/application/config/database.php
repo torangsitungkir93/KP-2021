@@ -73,6 +73,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+// Database Lokal
+
+// 'dsn'    => 'pgsql:host=ec2-54-144-251-233.compute-1.amazonaws.com;port=5432;dbname=d5uvi3k6s0jj4m;user=fycjgtrmjvfdva;password=e12ba3f1295ce7d93214af711b20a0d5481af71f89afaad2bf548cbdd700c33a',
+// 'hostname' => 'ec2-54-144-251-233.compute-1.amazonaws.com',
+// 'username' => 'fycjgtrmjvfdva',
+// 'password' => 'e12ba3f1295ce7d93214af711b20a0d5481af71f89afaad2bf548cbdd700c33a',
+// 'database' => 'd5uvi3k6s0jj4m',
+
+// Database Heroku
+
+// 'dsn'    => 'pgsql:host=localhost;port=5432;dbname=projekci3kp;user=postgresql;password=root',
+// 'hostname' => 'localhost',
+// 'username' => 'postgres',
+// 'password' => 'root',
+// 'database' => 'projekci3kp',
+
 $db['default'] = array(
     'dsn'    => 'pgsql:host=ec2-54-144-251-233.compute-1.amazonaws.com;port=5432;dbname=d5uvi3k6s0jj4m;user=fycjgtrmjvfdva;password=e12ba3f1295ce7d93214af711b20a0d5481af71f89afaad2bf548cbdd700c33a',
     'hostname' => 'ec2-54-144-251-233.compute-1.amazonaws.com',

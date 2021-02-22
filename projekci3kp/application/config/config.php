@@ -25,6 +25,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 */
 $config['base_url'] = 'https://pelatihansertifikasi.herokuapp.com/';
 // http://localhost/Sertifikasi/projekci3kp/
+// https://pelatihansertifikasi.herokuapp.com/
 // Ini link untuk local
 
 /*

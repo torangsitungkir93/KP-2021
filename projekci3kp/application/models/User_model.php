@@ -31,7 +31,10 @@ class User_model extends CI_Model
 
     public function activate($email)
     {
-        $this->db->set('is_active', 1)->update('user', ['email' => $email]);
+
+        $this->db->set('is_active', 1)
+            ->where('email', $email)
+            ->update('user');
         $this->db->delete('verification', ['email' => $email]);
     }
 

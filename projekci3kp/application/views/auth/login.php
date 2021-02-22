@@ -7,6 +7,7 @@
             <form class="login100-form validate-form" action="<?= base_url(); ?>auth" method="POST">
                 <span class="">
                     <?= $this->session->flashdata('message'); ?>
+                    <?= $this->session->unset_userdata('message') ?>
                 </span>
                 <span class="login100-form-title">
                     Member Login

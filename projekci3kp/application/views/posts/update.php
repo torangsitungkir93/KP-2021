@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row mt-4">
+    <div class="row mt-4 centered">
         <div class="col-md-4">
             <div class="card">
                 <h5 class="card-header">Update Post</h5>
@@ -15,10 +15,6 @@
                             <label for="exampleInputPassword1">Isi</label>
                             <textarea name="isi" id="isi" class="form-control" cols="30" rows="10"
                                 required><?= $post['isi']; ?></textarea>
-                        </div>
-                        <div class="form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                         <a href="<?= base_url(); ?>" class="btn btn-seecondary"></a>

@@ -79,47 +79,92 @@
 
     <div class="row">
         <div class="col-lg-4 mb-4">
-            <div class="card h-100 text-center">
+            <div class="card h-100 ">
                 <img class="card-img-top" src="<?= $link1; ?>" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Fortnite</h4>
+                    <h4 class="card-title" text-center>Fortnite Hadir di Konsol Nintendo Switch</h4>
                     <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia
-                        eum
-                        ipsum fugiat odio officiis odit.</p>
+
+                    <p class="card-text"
+                        style=" text-indent: 35px; -webkit-line-clamp:7; overflow:hidden; text-overflow:ellipsis; display: -webkit-box; -webkit-box-orient:vertical;">
+                        Kabar gembira bagi gamer pengguna konsol Nintendo Switch. Game Fortnite
+                        bergenre battle royale resmi diumumkan dapat dimainkan di Nintendo Swich setelah sebelumnya
+                        hanya merupakan rumor.
+
+                        Dilansir dari CNet, pengembang Fortnite, Epic Games juga mengatakan game survival ini sudah bisa
+                        diunduh hari ini. Informasi ini disampaikan pada Epic Games dalam acara tahun Electronic
+                        Entertaiment Expo pada Selasa (12/6).
+
+                        Kendati demikian, Sony tetap tidak mengizinkan para gamer Fortnite dari konsol lain selain PS4
+                        untuk bermain online. Jadi pengguna Switch tidak dapat bermain Fortnite secara online dengan
+                        temannya yang menggunakan PS4.
+
+                        Padahal banyak orang berharap Sony bisa menghapus pelarangan ini sehingga bisa bermain antar
+                        konsol. Faktanya akan muncul eror apabila gamer memilik akun Fortnite di PS4 dan berusaha untuk
+                        login di Switch.
+
+                        Permainan Fortnite PS 4 antar konsol hanya bisa dilakukan dengan PC, MAC, dan iOS. Sedangkan
+                        untuk Switch bisa dimainkan dengan PC, Mac, iOS, dan Xbox One.
+
+                        Fortnite di konsol Switch akan memiliki komunikasi online lebih baik dibandingan game Switch
+                        lainnya. Pasalnya berbeda game lain di konsol Switch yang mengharuskan untuk mengetik chat,
+                        komunikasi Fortnite di Switch bisa dilakukan dengan headset yang memiliki microphone. Artinya
+                        komunikasi bisa secara lebih efektif dilakukan.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#">Fortnite@example.com</a>
+                    <a href="<?= base_url(); ?>post/">Post</a>
                 </div>
             </div>
         </div>
         <div class="col-lg-4 mb-4">
-            <div class="card h-100 text-center">
+            <div class="card h-100 ">
                 <img class="card-img-top" src="<?= $link2; ?>" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Among Us</h4>
+                    <h4 class="card-title text-center">Hari gini belum tau game Among Us ?</h4>
                     <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia
-                        eum
-                        ipsum fugiat odio officiis odit.</p>
+                    <p class="card-text"
+                        style=" text-indent: 35px; -webkit-line-clamp:7; overflow:hidden; text-overflow:ellipsis; display: -webkit-box; -webkit-box-orient:vertical;">
+                        Halo Sobat My Blog ! Kamu tentu sudah tau dong tentang game yang sedang menjadi
+                        perbincangan utama para gamer dunia? Ya, Among Us! Among Us menjadi game yang banyak banget
+                        dibahas. Siapa sih yang sekarang nggak tau game Among Us? Hampir semua orang pasti tau permainan
+                        ini. Nggak cuma gamer profesional, orang awam juga suka memainkan game hits 2020 yang bikin
+                        ingin main lagi dan lagi.
+
+                        Among Us jadi game yang paling banyak diunduh saat ini. Bukan hanya karena gratis, tapi karena
+                        game ini memang sedang hits. Hampir semua orang pasti tau permainan yang satu ini. Kalau ada
+                        yang belum tau tentang Among Us, wah parah banget sih.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#">amongUs@example.com</a>
+                    <a href="<?= base_url(); ?>post/">Post</a>
                 </div>
             </div>
         </div>
         <div class="col-lg-4 mb-4">
-            <div class="card h-100 text-center">
+            <div class="card h-100 ">
                 <img class="card-img-top" src="<?= $link3; ?>" alt="">
                 <div class="card-body">
-                    <h4 class="card-title">Valorant</h4>
+                    <h4 class="card-title text-center">Valorant First Strike,Turname Pertama dari Riot Games</h4>
                     <h6 class="card-subtitle mb-2 text-muted">Position</h6>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus aut mollitia
-                        eum
-                        ipsum fugiat odio officiis odit.</p>
+                    <p class="card-text"
+                        style=" text-indent: 35px; -webkit-line-clamp:7; overflow:hidden; text-overflow:ellipsis; display: -webkit-box; -webkit-box-orient:vertical;">
+                        Setelah VALORANT Ignition Series yang melibatkan komunitas, Riot Games akhirnya
+                        turun tangan dan selenggarakan VALORANT First Strike secara mandiri.
+
+                        Setelah rilis tanggal 2 Juni 2020 lalu, VALORANT terbilang mendapat penerimaan yang cukup
+                        positif, baik secara internasional ataupun lokal. Merupakan game tactical FPS yang bersifat
+                        kompetitif, tidak heran jika esports jadi bagian yang melekat dari VALORANT. Sebelumnya Riot
+                        Games pernah mengatakan bahwa mereka tidak akan menangani esports VALORANT secara langsung untuk
+                        sementara waktu. Maka dari itu mereka membuat inisiatif bernama Ignition Series, sebuah seri
+                        turnamen besutan komunitas yang terselenggara di berbagai regional di dunia, yang di dukung oleh
+                        Riot Games.
+
+                        Tetapi melihat antusiasme atas esports yang begitu tinggi, Riot Games sepertinya tidak ingin
+                        menunggu lebih lama untuk mencoba mengurus esports VALORANT secara langsung. Maka dari itu, pada
+                        video Dev Diaries yang terbit tanggal 23 September 2020 lalu, Riot Games mengumumkan VALORANT
+                        First Strike.</p>
                 </div>
                 <div class="card-footer">
-                    <a href="#">valorant@example.com</a>
+                    <a href="<?= base_url(); ?>post/">Post</a>
                 </div>
             </div>
         </div>

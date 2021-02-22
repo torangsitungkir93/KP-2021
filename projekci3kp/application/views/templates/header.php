@@ -43,8 +43,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url(); ?>home">Home</a>
                     </li>
+
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url(); ?>post">Post</a>
+                        <form action="<?= base_url(); ?>post" method="POST" class="form-inline my-2 my-lg-0">
+                            <button class="nav-link btn" type="submit" name="submit">Post
+                            </button>
+                        </form>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
